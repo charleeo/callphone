@@ -11,7 +11,7 @@ class BankFactory {
 
     /** Creating constants for the bank names */
     const ZENITH_BANK='zenith';
-    const GTBANK='ggtbank';
+    const GTBANK='gtbank';
     const STERLING_BANK='sterling';
 
     /**
