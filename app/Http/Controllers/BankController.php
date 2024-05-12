@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\BankFactory\BankFactory;
+use App\Contracts\BankInterface;
 
 class BankController extends Controller {
 
-    private $bank;
-    protected $bankName;
+    private BankInterface $bank;
+    protected string $bankName;
 
     /**
      * Use setter approac to set the bank name dynamicaly and also create the Bank factory once
@@ -28,7 +29,6 @@ class BankController extends Controller {
          $this->setBankName($bankName);
          return  $this->bank->sendMoney($payload);
     }
-
     
     /**
      * Verify an account number
